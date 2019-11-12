@@ -62,9 +62,9 @@ class folderClass: UITableViewController {
               // Pass the selected object to the new view controller.
 
               // Send folder's name to other page
-              let destinationVC = segue.destination as! folderTableViewController
+        _ = segue.destination as! folderTableViewController
               if let tableViewCell = sender as? UITableViewCell {
-                  if let index = tableView.indexPath(for: tableViewCell)?.row
+                if (tableView.indexPath(for: tableViewCell)?.row) != nil
                   {
                     // destinationVC.folderName = folders[index].name
                   }
